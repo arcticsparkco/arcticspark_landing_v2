@@ -54,6 +54,32 @@ const projects: Project[] = [
     gradientFrom: "rgba(139,92,246,0.15)",
     gradientTo: "rgba(139,92,246,0)",
   },
+  {
+    name: "Frontier",
+    tagline: "Find investors funding your next endeavor",
+    category: "Financial",
+    badgeVariant: "gold",
+    description:
+      "Gear up for the season. Helping powder hounds discover the best equipment, read trusted reviews, and connect with the riding community.",
+    tags: ["React Native", "GraphQL", "Elasticsearch"],
+    accentColor: "#FFD700",
+    glowClass: "glow-gold",
+    gradientFrom: "rgba(255,215,0,0.15)",
+    gradientTo: "rgba(255,215,0,0)",
+  },  
+  {
+    name: "Moose Dispatch",
+    tagline: "Helping caretakers orchestra their days",
+    category: "Home",
+    badgeVariant: "violet",
+    description:
+      "Making the days easier for caretakers with the help of AI",
+    tags: ["React Native", "GraphQL", "Elasticsearch"],
+    accentColor: "#8B5CF6",
+    glowClass: "glow-violet",
+    gradientFrom: "rgba(139,92,246,0.15)",
+    gradientTo: "rgba(139,92,246,0)",
+  },  
 ];
 
 function ProjectCard({ project }: { project: Project }) {

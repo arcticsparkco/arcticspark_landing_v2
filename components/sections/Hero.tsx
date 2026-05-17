@@ -64,7 +64,7 @@ export default function Hero() {
         {/* Eyebrow tag */}
         <div className="inline-flex items-center gap-2 rounded-full border border-arctic-cyan/30 bg-arctic-cyan/10 px-4 py-1.5 mb-8 text-xs font-semibold text-arctic-cyan tracking-widest uppercase">
           <span className="w-1.5 h-1.5 rounded-full bg-arctic-cyan animate-pulse" />
-          Hong Kong · Software Studio
+          Endeavor into the next frontier with
         </div>
 
         {/* Headline */}
@@ -79,14 +79,14 @@ export default function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className="text-lg sm:text-xl md:text-2xl text-arctic-muted font-light italic mb-6 tracking-wide">
+{/*        <p className="text-lg sm:text-xl md:text-2xl text-arctic-muted font-light italic mb-6 tracking-wide">
           &ldquo;Endeavor into new territories.&rdquo;
         </p>
-
+*/}
         {/* Body */}
         <p className="text-base sm:text-lg text-arctic-muted/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-          We are a team of engineers and designers who build thoughtful digital
-          products — from community platforms to data-driven experiences.
+          We are a team of engineers and designers who build thoughtful digital products — 
+          from community platforms to data-driven experiences.
         </p>
 
         {/* CTAs */}
