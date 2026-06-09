@@ -1,0 +1,36 @@
+steps:
+  # Install dependencies
+  - name: "node:20"
+    entrypoint: npm
+    args: ["ci"]
+
+  # Build — outputs static files to ./out
+  - name: "node:20"
+    entrypoint: npm
+    args: ["run", "build"]
+
+  # Sync ./out to GCS bucket
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gsutil
+    args:
+      - -m
+      - rsync
+      - -r
+      - -d
+      - ./out
+      - gs://$_BUCKET_NAME
+
+  # Set public read on all objects
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gsutil
+    args:
+      - iam
+      - ch
+      - allUsers:objectViewer
+      - gs://$_BUCKET_NAME
+
+substitutions:
+  _BUCKET_NAME: arcticspark-landing  # replace with your GCS bucket name
+
+options:
+  logging: CLOUD_LOGGING_ONLY
