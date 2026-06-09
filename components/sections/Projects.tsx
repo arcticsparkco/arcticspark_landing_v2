@@ -60,7 +60,7 @@ const projects: Project[] = [
     category: "Financial",
     badgeVariant: "gold",
     description:
-      "Gear up for the season. Helping powder hounds discover the best equipment, read trusted reviews, and connect with the riding community.",
+      "",
     tags: ["React Native", "GraphQL", "Elasticsearch"],
     accentColor: "#FFD700",
     glowClass: "glow-gold",
