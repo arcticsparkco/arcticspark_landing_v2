@@ -64,7 +64,7 @@ export default function Hero() {
         {/* Eyebrow tag */}
         <div className="inline-flex items-center gap-2 rounded-full border border-arctic-cyan/30 bg-arctic-cyan/10 px-4 py-1.5 mb-8 text-xs font-semibold text-arctic-cyan tracking-widest uppercase">
           <span className="w-1.5 h-1.5 rounded-full bg-arctic-cyan animate-pulse" />
-          Endeavor into the next frontier with
+          AI-Native Product Studio
         </div>
 
         {/* Headline */}
@@ -85,8 +85,9 @@ export default function Hero() {
 */}
         {/* Body */}
         <p className="text-base sm:text-lg text-arctic-muted/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-          We are a team of engineers and designers who build thoughtful digital products — 
-          from community platforms to data-driven experiences.
+          We are engineers and designers building AI-native digital products —
+          fusing trendiest tech with thoughtful UX to create platforms
+          people love.
         </p>
 
         {/* CTAs */}

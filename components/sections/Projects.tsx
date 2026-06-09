@@ -17,11 +17,11 @@ interface Project {
 const projects: Project[] = [
   {
     name: "klazzy",
-    tagline: "Beauty. Discovered.",
+    tagline: "Beauty, curated by community.",
     category: "Community Platform",
     badgeVariant: "default",
     description:
-      "A community enabling beauty enthusiasts to discover, share, and review the latest products. Built around user-generated content and social discovery.",
+      "A community where beauty enthusiasts discover, share, and review the latest products. Our recommendation engine learns your aesthetic and surfaces the products that matter to you — before you know you need them.",
     tags: ["React", "Node.js", "PostgreSQL", "Redis"],
     accentColor: "#00D4FF",
     glowClass: "glow-cyan",
@@ -30,11 +30,11 @@ const projects: Project[] = [
   },
   {
     name: "artviz",
-    tagline: "Art. Data. Insight.",
+    tagline: "Your art market data analyst.",
     category: "Analytics Platform",
     badgeVariant: "gold",
     description:
-      "An analytics platform designed for art collectors and enthusiasts — surfacing market data, auction results, and upcoming art events in one place.",
+      "An analytics platform for collectors and enthusiasts — surfacing real-time market signals, predictive auction valuations, and emerging artist trends in one intelligent dashboard.",
     tags: ["Next.js", "Python", "BigQuery", "D3.js"],
     accentColor: "#FFD700",
     glowClass: "glow-gold",
@@ -43,11 +43,11 @@ const projects: Project[] = [
   },
   {
     name: "snowaddict",
-    tagline: "Gear up. Shred on.",
+    tagline: "AI-matched gear. Maximum shred.",
     category: "Gear & Community",
     badgeVariant: "violet",
     description:
-      "Gear up for the season. Helping powder hounds discover the best equipment, read trusted reviews, and connect with the riding community.",
+      "Your mountain companion. Intelligent gear recommendations matched to your riding style, real-time conditions analysis, and a community of powder hounds who live for the mountain.",
     tags: ["React Native", "GraphQL", "Elasticsearch"],
     accentColor: "#8B5CF6",
     glowClass: "glow-violet",
@@ -56,11 +56,11 @@ const projects: Project[] = [
   },
   {
     name: "Frontier",
-    tagline: "Find investors funding your next endeavor",
+    tagline: "AI-matched capital for bold ventures.",
     category: "Financial",
     badgeVariant: "gold",
     description:
-      "",
+      "Intelligent investor discovery powered. Frontier analyzes thousands of funding signals to match founders with the right investors at the right stage — turning cold outreach into warm introductions.",
     tags: ["React Native", "GraphQL", "Elasticsearch"],
     accentColor: "#FFD700",
     glowClass: "glow-gold",
@@ -69,11 +69,11 @@ const projects: Project[] = [
   },  
   {
     name: "Moose Dispatch",
-    tagline: "Helping caretakers orchestra their days",
+    tagline: "Your copilot for caregiving.",
     category: "Home",
     badgeVariant: "violet",
     description:
-      "Making the days easier for caretakers with the help of AI",
+      "An orchestration platform that helps caregivers manage complex schedules, coordinate care teams, and stay ahead of daily demands — so they can focus on what matters most: the people they care for.",
     tags: ["React Native", "GraphQL", "Elasticsearch"],
     accentColor: "#8B5CF6",
     glowClass: "glow-violet",
@@ -185,7 +185,7 @@ export default function Projects() {
             Our Work
           </h2>
           <p className="text-arctic-muted text-lg max-w-xl mx-auto">
-            A selection of products we have designed, built, and shipped.
+            AI-powered products we've designed, built, and shipped into the wild.
           </p>
         </div>
 
