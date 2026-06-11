@@ -20,14 +20,6 @@ steps:
       - ./out
       - gs://$_BUCKET_NAME
 
-  # Set public read on all objects
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: gsutil
-    args:
-      - iam
-      - ch
-      - allUsers:objectViewer
-      - gs://$_BUCKET_NAME
 
 substitutions:
   _BUCKET_NAME: arcticspark-landing  # replace with your GCS bucket name
