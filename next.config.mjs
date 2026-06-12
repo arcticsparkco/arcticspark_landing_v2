@@ -2,7 +2,9 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  assetPrefix: "https://storage.googleapis.com/arcticspark-landing",
+  assetPrefix: process.env.NODE_ENV === "production"
+    ? "https://storage.googleapis.com/arcticspark-landing"
+    : "",
   images: {
     unoptimized: true,
   },
