@@ -62,3 +62,50 @@ To preview the production build locally:
 npm run build
 npx serve out
 ```
+
+## Deployment — Google Cloud Storage
+
+The site deploys automatically via **Google Cloud Build** on every push. The build pipeline (`cloudbuild.yaml`) runs three steps:
+
+1. `npm ci` — install dependencies
+2. `npm run build` — generate the static export to `./out`
+3. `gsutil rsync` — sync `./out` to a GCS bucket
+
+### One-time setup
+
+**1. Create the GCS bucket**
+```bash
+gsutil mb -l <REGION> gs://<BUCKET_NAME>
+gsutil web set -m index.html -e 404.html gs://<BUCKET_NAME>
+```
+
+**2. Make the bucket publicly readable**
+```bash
+gsutil iam ch allUsers:objectViewer gs://<BUCKET_NAME>
+```
+
+**3. Grant the Cloud Build service account write access to the bucket**
+```bash
+gcloud projects add-iam-policy-binding <PROJECT_ID> \
+  --member="serviceAccount:<CLOUDBUILD_SERVICE_ACCOUNT>" \
+  --role="roles/storage.admin"
+```
+
+**4. Connect your repository** in the [Cloud Build console](https://console.cloud.google.com/cloud-build/triggers) and point the trigger at `cloudbuild.yaml`.
+
+### Substitution variables
+
+The `cloudbuild.yaml` uses two substitution variables you can override per-trigger in the Cloud Build console:
+
+| Variable | Description | Default |
+|---|---|---|
+| `_BUCKET_NAME` | GCS bucket to deploy to | `arcticspark-landing` |
+| `_REGION` | GCP region | `us-central1` |
+
+### Viewing the deployed site
+
+```
+https://storage.googleapis.com/<BUCKET_NAME>/index.html
+```
+
+> For a custom domain with HTTPS, set up a Cloud Load Balancer with Cloud CDN in front of the bucket.
